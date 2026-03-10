@@ -1,8 +1,5 @@
 pipeline{
     agent any;
-    tools{
-        terraform 'terraform-m1'
-    }
     stages{
         stage("git pull"){
             steps{
