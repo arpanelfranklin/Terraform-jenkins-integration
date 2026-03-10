@@ -1,0 +1,6 @@
+terraform-key-ec2.pub
+terraform-key-ec2
+.terraform.lock.hcl
+.terraform/
+
+
