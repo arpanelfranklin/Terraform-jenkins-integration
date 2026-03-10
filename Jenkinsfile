@@ -8,12 +8,12 @@ pipeline{
         }
         stage("terrafrom init"){
             steps{
-                sh "terrafrom init"
+                sh "terraform init"
             }
         }
         stage("terrafrom-validate"){
             steps{
-                sh "terrafrom validate"
+                sh "terraform validate"
             }
         }
         stage("terraform-plan"){
