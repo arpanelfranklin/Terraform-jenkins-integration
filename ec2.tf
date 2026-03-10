@@ -67,9 +67,9 @@ tags = {
 
 ## EC2 Instance 
 resource "aws_instance" "terraform-jenkins" {
-  key_name = aws_key_pair.key-pair
+  key_name = aws_key_pair.key-pair.key_name
   ami = var.ami
-  security_groups = [aws_security_group.security-group]
+  vpc_security_group_ids = [aws_security_group.security-group.id]
   instance_type = var.instance-type
   user_data = file("./shell-script/nginx.sh")
   root_block_device {
