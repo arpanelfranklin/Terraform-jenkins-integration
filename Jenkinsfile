@@ -1,10 +1,5 @@
 pipeline{
-    agent {
-        docker{
-            image: 'hashicorp/terraform:latest'
-            args '-v $PWD:/workspace -w /workspace'
-        }
-    };
+    agent any;
     stages{
         stage("git pull"){
             steps{
